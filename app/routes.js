@@ -19,6 +19,17 @@ module.exports = function(app, passport) {
         req.logout();
         res.redirect('/');
     });
+     // MARKETER ==============================
+    app.get('/marketer', function(req, res) {
+        res.render('marketer.ejs', {
+            user : req.user
+        });
+    // CUSTOMER ==============================
+    app.get('/customer', function(req, res) {
+        res.render('customer.ejs', {
+            user : req.user
+        });
+    });
 
 // =============================================================================
 // AUTHENTICATE (FIRST LOGIN) ==================================================
